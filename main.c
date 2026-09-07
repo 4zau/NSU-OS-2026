@@ -10,7 +10,10 @@ int main()
     time_t now;
     struct tm *sp;
 
-    putenv("TZ=PST8PDT");
+    if (putenv("TZ=PST8PDT") == -1) {
+        perror("failed setting timezone");
+	exit(1);    
+    }
     tzset();
     
     (void) time( &now );
