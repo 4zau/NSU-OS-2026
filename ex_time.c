@@ -12,7 +12,7 @@ int main()
 
     if (putenv("TZ=PST8PDT") == -1) {
         perror("failed setting timezone");
-	exit(1);    
+        exit(1);    
     }
     tzset();
     
