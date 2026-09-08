@@ -15,7 +15,7 @@ int main()
         exit(1);    
     }
     tzset();
-    
+
     (void) time( &now );
 
     printf("%s", ctime(&now));
@@ -26,6 +26,6 @@ int main()
         sp->tm_mon + 1, sp->tm_mday,
         sp->tm_year % 100, sp->tm_hour,
         sp->tm_min, tzname[sp->tm_isdst]);
-    
+
     exit(0);
 }
